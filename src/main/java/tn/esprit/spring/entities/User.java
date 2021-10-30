@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
+//hgdgfd
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
