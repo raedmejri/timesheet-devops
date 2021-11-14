@@ -67,7 +67,7 @@
 					<url>http://localhost:8081/repository/maven-releases/</url>
 					<options>
 						<name>timesheet--devops</name>
-						<version>2.0</version>
+						<version>1.0</version>
 						<generatePom>true</generatePom>
 						<description>timesheet--devops</description>
 						<packaging>jar</packaging>
