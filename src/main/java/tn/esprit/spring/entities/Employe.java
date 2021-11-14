@@ -22,7 +22,7 @@ public class Employe implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	//@SequenceGenerator(name="seq")
+
 	private int id;
 	
 	private String prenom;
@@ -30,8 +30,7 @@ public class Employe implements Serializable {
 
 	private String nom;
 		
-	//@Column(unique=true)
-	//@Pattern(regex=".+\@.+\..+")
+	
 	private String email;
 
 	private String password;
@@ -39,13 +38,13 @@ public class Employe implements Serializable {
 	private boolean actif;
 	
 	@Enumerated(EnumType.STRING)
-	//@NotNull
+
 	private Role role;
 	
-	//@JsonBackReference  
+
 	@JsonIgnore
 	@ManyToMany(mappedBy="employes" )
-	//@NotNull
+
 	private List<Departement> departements;
 	
 	@OneToOne
@@ -58,7 +57,7 @@ public class Employe implements Serializable {
 		
 	public Employe(int id, String prenom, String nom, String email, String password, boolean actif, Role role) {
 		super();
-		System.out.println("test"); 
+		
 		this.id = id;
 		this.prenom = prenom;
 		this.nom = nom;

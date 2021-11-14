@@ -3,13 +3,13 @@ package tn.esprit.spring.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.SequenceGenerator;
+
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -23,20 +23,20 @@ public class Contrat implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	//@SequenceGenerator(name="seq")
+	
 	private int reference;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateDebut;
 	
-	//@Column(name="TYPE_CTR", nullable=true )
+
 	private String typeContrat;
 	
 	@Transient 
 	private float telephone;
 	
 	@JsonIgnore
-	//@JsonBackReference
+	
 	@OneToOne(mappedBy="contrat")
 	private Employe employe;
 

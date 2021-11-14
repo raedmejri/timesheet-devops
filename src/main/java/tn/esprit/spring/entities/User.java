@@ -19,12 +19,12 @@ import javax.persistence.TemporalType;
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-//hgdgfd
+
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
 	
-	//@Column(name="USR_FIRST_NAME", length=20, unique=true, nullable=false)
+	
 	private String firstName; 
 	
 	private String lastName;
@@ -36,7 +36,7 @@ public class User implements Serializable {
 	Role role; 
 	
 	public User() {	}
-//userrrr
+
 	public User(String firstName, String lastName, Date dateNaissance, Role role) {
 		super();
 		this.firstName = firstName;
